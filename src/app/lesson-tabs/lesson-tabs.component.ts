@@ -4,10 +4,10 @@ import {ActivatedRoute, Params} from '@angular/router';
 
 @Component({
   selector: 'app-lesson-tab',
-  templateUrl: './lesson-tab.component.html',
-  styleUrls: ['./lesson-tab.component.css']
+  templateUrl: './lesson-tabs.component.html',
+  styleUrls: ['./lesson-tabs.component.css']
 })
-export class LessonTabComponent implements OnInit {
+export class LessonTabsComponent implements OnInit {
 
   moduleId;
   courseId;

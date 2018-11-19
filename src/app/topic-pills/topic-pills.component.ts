@@ -4,10 +4,10 @@ import {ActivatedRoute, Params} from '@angular/router';
 
 @Component({
   selector: 'app-topic-pill',
-  templateUrl: './topic-pill.component.html',
-  styleUrls: ['./topic-pill.component.css']
+  templateUrl: './topic-pills.component.html',
+  styleUrls: ['./topic-pills.component.css']
 })
-export class TopicPillComponent implements OnInit {
+export class TopicPillsComponent implements OnInit {
 
   courseId;
   moduleId;

@@ -28,16 +28,6 @@ export class CourseNavigatorComponent implements OnInit {
       .then(course => this.course.title = course.title);
   }
 
-  //
-  // setTopicDetails() {
-  //   this.activatedRoute.params.subscribe((params: Params) => {
-  //     this.selectedTopic = params['topicId'];
-  //     if (this.selectedTopic !== undefined) {
-  //       this.service.findAllWidgetsForTopic(this.selectedTopic)
-  //         .then(widgets => this.widgets = widgets);
-  //     }
-  //   });
-  // }
 
   ngOnInit() {
     this.userService
