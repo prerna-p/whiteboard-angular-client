@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
-const COURSE_API_URL = 'http://localhost:8080/api/user/userId/course/';
-const uri = 'http://localhost:8080/api/user/';
+const COURSE_API_URL = 'https://java-jpa-server.herokuapp.com/api/user/userId/course/';
+const uri = 'https://java-jpa-server.herokuapp.com/api/user/';
 
 @Injectable()
 export class CourseServiceClient {

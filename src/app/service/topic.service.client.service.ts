@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 
-const tUri = 'http://localhost:8080/api/lesson/lid/topic';
-const tUri2 = 'http://localhost:8080/api/topic/tid';
+const tUri = 'https://java-jpa-server.herokuapp.com/api/lesson/lid/topic';
+const tUri2 = 'https://java-jpa-server.herokuapp.com/api/topic/tid';
 
 @Injectable()
 export class TopicServiceClient {

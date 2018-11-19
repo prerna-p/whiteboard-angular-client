@@ -14,7 +14,9 @@ export class LessonTabsComponent implements OnInit {
   lessonId;
   lessons = [];
   constructor(private lessonService: LessonServiceClient,
-              private activatedRoute: ActivatedRoute) {}
+              private activatedRoute: ActivatedRoute) {
+    this.setModuleDetails();
+  }
 
   setModuleDetails() {
     this.activatedRoute.params.subscribe((params: Params) => {
@@ -30,7 +32,6 @@ export class LessonTabsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.setModuleDetails();
   }
 
 }

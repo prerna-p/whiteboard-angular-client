@@ -16,6 +16,7 @@ export class ModuleListComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute,
               private service: ModuleServiceClient) {
+    this.setCourseDetails();
   }
 
   setCourseDetails() {
@@ -28,7 +29,6 @@ export class ModuleListComponent implements OnInit {
   }
 
   ngOnInit() {
-  this.setCourseDetails();
   }
 
 }

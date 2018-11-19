@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 
-const mUri = 'http://localhost:8080/api/course/cid/module';
-const mUri2 = 'http://localhost:8080/api/course/1/module/1';
+const mUri = 'https://java-jpa-server.herokuapp.com/api/course/cid/module';
+const mUri2 = 'https://java-jpa-server.herokuapp.com/api/course/1/module/1';
 
 
 @Injectable()

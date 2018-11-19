@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-const USER_API_URL = 'http://localhost:8080';
+const USER_API_URL = 'https://java-jpa-server.herokuapp.com';
 @Injectable()
 export class UserServiceClient {
 

@@ -16,7 +16,9 @@ export class TopicPillsComponent implements OnInit {
   topicId;
   topics = [];
   constructor(private topicService: TopicServiceClient,
-              private activatedRoute: ActivatedRoute) { }
+              private activatedRoute: ActivatedRoute) {
+    this.setLessonDetails();
+  }
 
   setLessonDetails() {
     this.activatedRoute.params.subscribe((params: Params) => {
@@ -34,7 +36,6 @@ export class TopicPillsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.setLessonDetails();
   }
 
 }
