@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {SectionServiceClient} from '../service/section.service.client';
-import {CourseNavigatorServiceClient} from '../service/course-navigator.service.client';
+import {CourseServiceClient} from '../service/course-service-client.service';
 import {UserServiceClient} from '../service/user.service.client';
 import {Router} from '@angular/router';
 import {Section} from '../models/section.model.client';
@@ -23,7 +23,7 @@ export class SectionListComponent implements OnInit {
   toEnroll = true;
   user: User = new User();
   constructor(private sectionService: SectionServiceClient,
-              private courseService: CourseNavigatorServiceClient,
+              private courseService: CourseServiceClient,
               private userService: UserServiceClient,
               private router: Router) { }
 

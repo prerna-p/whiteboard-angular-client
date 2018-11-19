@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CourseNavigatorServiceClient} from '../service/course-navigator.service.client';
+import {CourseServiceClient} from '../service/course-service-client.service';
 import {SectionServiceClient} from '../service/section.service.client';
 
 @Component({
@@ -11,7 +11,7 @@ export class AdminComponent implements OnInit {
 
   courses = [];
   sections = [];
-  constructor(private courseService: CourseNavigatorServiceClient,
+  constructor(private courseService: CourseServiceClient,
               private sectionService: SectionServiceClient) { }
 
   findSectionsForCourse(courseId) {

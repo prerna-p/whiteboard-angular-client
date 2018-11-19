@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
-import {CourseNavigatorServiceClient} from '../service/course-navigator.service.client';
+import {CourseServiceClient} from '../service/course-service-client.service';
 
 @Component({
   selector: 'app-module-list',
@@ -14,7 +14,7 @@ export class ModuleListComponent implements OnInit {
   course = {courseId: ''};
 
   constructor(private activatedRoute: ActivatedRoute,
-              private service: CourseNavigatorServiceClient) {
+              private service: CourseServiceClient) {
     this.setCourseDetails();
   }
 

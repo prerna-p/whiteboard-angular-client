@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CourseNavigatorServiceClient} from '../service/course-navigator.service.client';
+import {CourseServiceClient} from '../service/course-service-client.service';
 import {ActivatedRoute, Params} from '@angular/router';
 
 @Component({
@@ -13,7 +13,7 @@ export class LessonTabComponent implements OnInit {
   courseId;
   lessonId;
   lessons = [];
-  constructor(private service: CourseNavigatorServiceClient,
+  constructor(private service: CourseServiceClient,
               private activatedRoute: ActivatedRoute) {}
 
   setModuleDetails() {

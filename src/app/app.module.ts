@@ -3,7 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
-import {CourseNavigatorServiceClient} from './service/course-navigator.service.client';
+import {CourseServiceClient} from './service/course-service-client.service';
+import {ModuleServiceClient} from './service/module-service-client.service';
+import {LessonServiceClient} from './service/lesson-service-client.service';
+import {TopicServiceClient} from './service/topic-service-client.service';
+import {WidgetServiceClient} from './service/widget-service-client.service';
 import { CourseNavigatorComponent } from './course-navigator/course-navigator.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -44,7 +48,11 @@ import { TopicPillComponent } from './topic-pill/topic-pill.component';
     routing
   ],
   providers: [
-    CourseNavigatorServiceClient,
+    CourseServiceClient,
+    ModuleServiceClient,
+    LessonServiceClient,
+    TopicServiceClient,
+    WidgetServiceClient,
     UserServiceClient,
     SectionServiceClient
   ],

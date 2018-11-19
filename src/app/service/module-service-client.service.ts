@@ -2,16 +2,7 @@ import {Injectable} from '@angular/core';
 const COURSE_API_URL = 'http://localhost:8080';
 // const COURSE_API_URL = 'http://localhost:3000';
 @Injectable()
-export class CourseNavigatorServiceClient {
-  findCourseById(courseId) {
-    return fetch(COURSE_API_URL + '/api/course/' + courseId)
-      .then(response => response.json());
-  }
-
-  findAllCourses() {
-    return fetch(COURSE_API_URL + '/api/course')
-      .then(response => response.json());
-  }
+export class ModuleServiceClient {
 
   findAllModulesForCourse(courseId) {
     return fetch(COURSE_API_URL + '/api/course/' + courseId + '/module')

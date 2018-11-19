@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CourseNavigatorServiceClient} from '../service/course-navigator.service.client';
+import {CourseServiceClient} from '../service/course-service-client.service';
 import {ActivatedRoute, Params} from '@angular/router';
 import {User} from '../models/user.model.client';
 import {UserServiceClient} from '../service/user.service.client';
@@ -11,7 +11,7 @@ import {UserServiceClient} from '../service/user.service.client';
 })
 export class CourseNavigatorComponent implements OnInit {
 
-  constructor(private service: CourseNavigatorServiceClient,
+  constructor(private service: CourseServiceClient,
               private userService: UserServiceClient,
               private activatedRoute: ActivatedRoute) {
     this.setCourseDetails();

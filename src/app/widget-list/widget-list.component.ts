@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
-import {CourseNavigatorServiceClient} from '../service/course-navigator.service.client';
+import {CourseServiceClient} from '../service/course-service-client.service';
 
 @Component({
   selector: 'app-widget-list',
@@ -14,7 +14,7 @@ export class WidgetListComponent implements OnInit {
   widgets = [];
 
   constructor(private activatedRoute: ActivatedRoute,
-              private service: CourseNavigatorServiceClient) { }
+              private service: CourseServiceClient) { }
 
   setTopicDetails() {
     this.activatedRoute.params.subscribe((params: Params) => {

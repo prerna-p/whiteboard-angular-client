@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CourseNavigatorServiceClient} from '../service/course-navigator.service.client';
+import {CourseServiceClient} from '../service/course-service-client.service';
 import {Course} from '../models/course.model.client';
 
 @Component({
@@ -9,7 +9,7 @@ import {Course} from '../models/course.model.client';
 })
 export class CourseGridComponent implements OnInit {
 
-  constructor(private service: CourseNavigatorServiceClient) { }
+  constructor(private service: CourseServiceClient) { }
 
   courses: Course[] = [];
 

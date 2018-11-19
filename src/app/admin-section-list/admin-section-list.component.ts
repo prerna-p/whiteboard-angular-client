@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {SectionServiceClient} from '../service/section.service.client';
 import {ActivatedRoute, Router} from '@angular/router';
-import {CourseNavigatorServiceClient} from '../service/course-navigator.service.client';
+import {CourseServiceClient} from '../service/course-service-client.service';
 import {Section} from '../models/section.model.client';
 
 @Component({
@@ -11,7 +11,7 @@ import {Section} from '../models/section.model.client';
 })
 export class AdminSectionListComponent implements OnInit {
   constructor(private service: SectionServiceClient,
-              private courseService: CourseNavigatorServiceClient,
+              private courseService: CourseServiceClient,
               private router: Router,
               private route: ActivatedRoute) {
     this.route.params.subscribe(params =>

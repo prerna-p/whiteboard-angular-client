@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CourseNavigatorServiceClient} from '../service/course-navigator.service.client';
+import {CourseServiceClient} from '../service/course-service-client.service';
 import {ActivatedRoute, Params} from '@angular/router';
 
 @Component({
@@ -14,7 +14,7 @@ export class TopicPillComponent implements OnInit {
   lessonId;
   topicId;
   topics = [];
-  constructor(private service: CourseNavigatorServiceClient,
+  constructor(private service: CourseServiceClient,
               private activatedRoute: ActivatedRoute) { }
 
   setLessonDetails() {
