@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <div class="row bg-danger mb-4">
+    <div class="col-sm-9">
+      <h3 class="ml-lg-3">White Board</h3>
+    </div>
+    <div class="col-sm-3">
+      <button (click)="logout()"
+              *ngIf="user.firstName !== undefined"
+              class="btn btn-warning ml-4 float-right">
+        Logout
+      </button>
+      <a class="mt-2 float-right" routerLink="/home">Home</a>
+    </div>
+  </div>
+<h2>Sections</h2>
+
+<div class="row">
+  <div class="col-sm-3">
+    <ul class="list-group">
+      <li class="list-group-item">
+        <h3>Courses</h3>
+      </li>
+      <li (click)="selectCourse(course)"
+          *ngFor="let course of courses"
+          [ngClass]="{'active': course.id == selectedCourse.id}"
+          class="list-group-item">
+        {{course.title}}
+      </li>
+    </ul>
+  </div>
+  <div class="col-sm-8">
+    <div class="row">
+      <div *ngFor="let section of sections" class="col-3 ml-2">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{section.name}}</h5>
+            <a *ngIf="section.seats > 0"
+               (click)="enroll(section)"
+               class="btn btn-primary btn-block">
+              Enroll
+            </a>
+          </div>
+          <div class="card-footer text-muted">
+            Seats Remaining : {{section.seats}}/{{section.maxSeats}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
