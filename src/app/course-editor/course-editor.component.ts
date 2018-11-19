@@ -5,12 +5,11 @@ import {User} from '../models/user.model.client';
 import {UserServiceClient} from '../service/user.service.client';
 
 @Component({
-  selector: 'app-course-navigator',
-  templateUrl: './course-navigator.component.html',
-  styleUrls: ['./course-navigator.component.css']
+  selector: 'app-course-editor',
+  templateUrl: './course-editor.component.html',
+  styleUrls: ['./course-editor.component.css']
 })
-export class CourseNavigatorComponent implements OnInit {
-
+export class CourseEditorComponent implements OnInit {
   constructor(private service: CourseServiceClient,
               private userService: UserServiceClient,
               private activatedRoute: ActivatedRoute) {

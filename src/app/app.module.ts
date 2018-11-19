@@ -8,7 +8,7 @@ import {ModuleServiceClient} from './service/module-service-client.service';
 import {LessonServiceClient} from './service/lesson-service-client.service';
 import {TopicServiceClient} from './service/topic-service-client.service';
 import {WidgetServiceClient} from './service/widget-service-client.service';
-import { CourseNavigatorComponent } from './course-navigator/course-navigator.component';
+import { CourseEditorComponent } from './course-editor/course-editor.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
@@ -22,13 +22,13 @@ import { WidgetListComponent } from './widget-list/widget-list.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminSectionListComponent } from './admin-section-list/admin-section-list.component';
 import { ModuleListComponent } from './module-list/module-list.component';
-import { LessonTabComponent } from './lesson-tab/lesson-tab.component';
-import { TopicPillComponent } from './topic-pill/topic-pill.component';
+import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
+import { TopicPillsComponent } from './topic-pills/topic-pills.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CourseNavigatorComponent,
+    CourseEditorComponent,
     LoginComponent,
     ProfileComponent,
     RegisterComponent,
@@ -39,8 +39,8 @@ import { TopicPillComponent } from './topic-pill/topic-pill.component';
     AdminComponent,
     AdminSectionListComponent,
     ModuleListComponent,
-    LessonTabComponent,
-    TopicPillComponent,
+    LessonTabsComponent,
+    TopicPillsComponent,
   ],
   imports: [
     BrowserModule,
