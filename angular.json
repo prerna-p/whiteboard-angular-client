@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "webdev-summer2-angular-pkotak": {
+    "whiteboard-angular-client": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/webdev-summer2-angular-pkotak",
+            "outputPath": "dist/whiteboard-angular-client",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "webdev-summer2-angular-pkotak:build"
+            "browserTarget": "whiteboard-angular-client:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "webdev-summer2-angular-pkotak:build:production"
+              "browserTarget": "whiteboard-angular-client:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "webdev-summer2-angular-pkotak:build"
+            "browserTarget": "whiteboard-angular-client:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "webdev-summer2-angular-pkotak-e2e": {
+    "whiteboard-angular-client-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "webdev-summer2-angular-pkotak:serve"
+            "devServerTarget": "whiteboard-angular-client:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "webdev-summer2-angular-pkotak:serve:production"
+              "devServerTarget": "whiteboard-angular-client:serve:production"
             }
           }
         },
@@ -123,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "webdev-summer2-angular-pkotak"
+  "defaultProject": "whiteboard-angular-client"
 }

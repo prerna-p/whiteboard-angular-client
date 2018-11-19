@@ -1,36 +1,16 @@
 import {Injectable} from '@angular/core';
-const COURSE_API_URL = 'http://localhost:8080/api/course/';
+const COURSE_API_URL = 'http://localhost:8080/api/user/userId/course/';
 const uri = 'http://localhost:8080/api/user/';
 
 @Injectable()
 export class CourseServiceClient {
-  findCourseById(courseId) {
-    return fetch(COURSE_API_URL + courseId)
+  findCourseById(userId, courseId) {
+    return fetch(COURSE_API_URL.replace('userId', userId) + courseId)
       .then(response => response.json());
   }
 
-  findAllCourses() {
-    return fetch(COURSE_API_URL)
-      .then(response => response.json());
-  }
-
-  findAllModulesForCourse(courseId) {
-    return fetch(COURSE_API_URL + courseId + '/module')
-      .then(response => response.json());
-  }
-
-  findAllLessonsForModule(moduleId) {
-    return fetch(COURSE_API_URL + '1/module/' + 1 + '/lesson')
-      .then(response => response.json());
-  }
-
-  findAllTopicsForLesson(lessonId) {
-    return fetch(COURSE_API_URL + '1/module/1/lesson/' + 1 + '/topic')
-      .then(response => response.json());
-  }
-
-  findAllWidgetsForTopic(topicId) {
-    return fetch('http://localhost:8080/api/topic/' + 1 + '/widget')
+  findAllCourses(userId) {
+    return fetch(COURSE_API_URL.replace('userId', userId))
       .then(response => response.json());
   }
 

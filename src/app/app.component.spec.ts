@@ -13,15 +13,15 @@ describe('AppComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   }));
-  it(`should have as title 'webdev-summer2-angular-pkotak'`, async(() => {
+  it(`should have as title 'whiteboard-angular-client'`, async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('webdev-summer2-angular-pkotak');
+    expect(app.title).toEqual('whiteboard-angular-client');
   }));
   it('should render title in a h1 tag', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to webdev-summer2-angular-pkotak!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to whiteboard-angular-client!');
   }));
 });

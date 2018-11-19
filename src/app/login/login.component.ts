@@ -16,7 +16,8 @@ export class LoginComponent implements OnInit {
 
   login(username, password) {
     this.service.login(username, password)
-      .then(() => this.router.navigate(['/profile']));
+      .then(response => response.json())
+      .then((user) => this.router.navigate(['user', user.id]));
   }
 
   ngOnInit() {

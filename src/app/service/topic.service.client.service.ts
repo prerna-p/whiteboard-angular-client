@@ -6,7 +6,7 @@ const tUri2 = 'http://localhost:8080/api/topic/tid';
 @Injectable()
 export class TopicServiceClient {
 
-  findTopicsForLesson = (lessonId) => {
+  findTopicsForLesson(lessonId) {
     return fetch(tUri.replace('lid', lessonId),
       {credentials: 'include'})
       .then(response => response.json());
