@@ -13,8 +13,9 @@ export class LessonServiceClient {
     }).then(response => response.json());
   }
 
-  findAllLessons = (mid) => {
-    return fetch(lUri.replace('mid', mid))
+  findAllLessons() {
+    return fetch('http://localhost:8080/api/lesson',
+      {credentials: 'include'})
       .then(response => response.json());
   }
 
