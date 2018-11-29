@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {CourseServiceClient} from '../service/course-service-client.service';
+import {CourseServiceClient} from '../service/course.service.client.service';
 import {ActivatedRoute, Params} from '@angular/router';
-import {User} from '../models/user.model.client';
 import {UserServiceClient} from '../service/user.service.client';
 
 @Component({
@@ -16,25 +15,19 @@ export class CourseEditorComponent implements OnInit {
     this.setCourseDetails();
   }
   course = {courseId: '', title: ''};
-  user: User = new User();
 
   setCourseDetails() {
     this.activatedRoute.params.subscribe((params: Params) => {
-      this.course.courseId = params['courseId'];
+      (this.service.findCourseById(parseInt(params.userId), parseInt(params.courseId)))
+        .then(course => {this.course.title = course.title; this.course.courseId = params['courseId']; });
     });
 
-    this.service.findCourseById(this.course.courseId)
-      .then(course => this.course.title = course.title);
   }
 
 
   ngOnInit() {
-    this.userService
-      .profile()
-      .then(user => this.user = user);
+    this.setCourseDetails()
 
-    this.service.findCourseById(this.course.courseId)
-      .then(course => this.course = course);
   }
 
 }

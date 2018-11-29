@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'webdev-summer2-angular-pkotak';
+  title = 'whiteboard-angular-client';
 }

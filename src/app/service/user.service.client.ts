@@ -1,31 +1,29 @@
 import {Injectable} from '@angular/core';
-const SECTION_API_URL = 'https://cs5610-summer2-2018-nodejs.herokuapp.com';
-// const SECTION_API_URL = 'http://localhost:3000';
+const USER_API_URL = 'http://localhost:8080';
 @Injectable()
 export class UserServiceClient {
 
   findUserById(userId) {
-      return fetch(SECTION_API_URL + '/api/user/' + userId)
+      return fetch(USER_API_URL + '/api/user/' + userId)
         .then(response => response.json());
   }
 
   login(username, password) {
-    const credentials = {
-      username: username,
-      password: password
-    };
-    return fetch(SECTION_API_URL + '/api/login', {
-      method: 'post',
+    return fetch(USER_API_URL + '/api/login', {
+      method: 'POST',
       credentials: 'include',
+      body: JSON.stringify({
+        'username': username,
+        'password': password
+      }),
       headers: {
-        'content-type': 'application/json'
-      },
-      body: JSON.stringify(credentials)
+        'Content-Type': 'application/json'
+      }
     });
   }
 
   logout() {
-    return fetch(SECTION_API_URL + '/api/logout',
+    return fetch(USER_API_URL + '/api/logout',
       {
       method: 'post',
         credentials: 'include'
@@ -33,7 +31,7 @@ export class UserServiceClient {
   }
 
   profile() {
-    return fetch(SECTION_API_URL + '/api/profile',
+    return fetch(USER_API_URL + '/api/profile',
       {
       credentials: 'include'
     }).then(response => response.json());
@@ -44,7 +42,7 @@ export class UserServiceClient {
       username: username,
       password: password
     };
-    return fetch(SECTION_API_URL + '/api/register', {
+    return fetch(USER_API_URL + '/api/register', {
       body: JSON.stringify(user),
       credentials: 'include',
       method: 'post',
@@ -55,7 +53,7 @@ export class UserServiceClient {
   }
 
   updateUser(user) {
-    return fetch(SECTION_API_URL + '/api/profile', {
+    return fetch(USER_API_URL + '/api/profile', {
       body: JSON.stringify(user),
       credentials: 'include',
       method: 'put',

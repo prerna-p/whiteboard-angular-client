@@ -6,6 +6,11 @@ const lUri2 = 'http://localhost:8080/api/lesson'; // for the rest
 
 @Injectable()
 export class LessonServiceClient {
+  findAllLessonsForModule(moduleId) {
+    return fetch(lUri.replace('mid', moduleId))
+      .then(response => response.json());
+  }
+
   findLessonsForCourseId = (cid, mid) => {
     return fetch(mUri.replace('cid', cid)
       .replace('mid', mid), {

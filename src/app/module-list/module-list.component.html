@@ -2,19 +2,16 @@
   <div class="col-4">
     <ul class="list-group">
       <li class="list-group-item">
-        <h3>Modules</h3>
+        <h5>Modules</h5>
       </li>
       <li *ngFor="let module of modules"
           class="list-group-item"
           [ngClass]="{'active': module.id == moduleId}">
-        <a routerLink="/course/{{course.courseId}}/module/{{module.id}}">{{module.title}}</a>
+        <a routerLink="/user/{{userId}}/course/{{course.courseId}}/module/{{module.id}}">{{module.title}}</a>
       </li>
     </ul>
   </div>
   <div class="col-8">
-    <app-topic-pill></app-topic-pill>
-    <div class="container-fluid">
-      <app-widget-list></app-widget-list>
-    </div>
+    <app-lesson-tab></app-lesson-tab>
   </div>
 </div>

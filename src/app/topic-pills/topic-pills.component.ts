@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {CourseServiceClient} from '../service/course-service-client.service';
+import {CourseServiceClient} from '../service/course.service.client.service';
 import {ActivatedRoute, Params} from '@angular/router';
+import {TopicServiceClient} from '../service/topic.service.client.service';
 
 @Component({
   selector: 'app-topic-pill',
@@ -8,24 +9,25 @@ import {ActivatedRoute, Params} from '@angular/router';
   styleUrls: ['./topic-pills.component.css']
 })
 export class TopicPillsComponent implements OnInit {
-
+  userId;
   courseId;
   moduleId;
   lessonId;
   topicId;
   topics = [];
-  constructor(private service: CourseServiceClient,
+  constructor(private topicService: TopicServiceClient,
               private activatedRoute: ActivatedRoute) { }
 
   setLessonDetails() {
     this.activatedRoute.params.subscribe((params: Params) => {
+      this.userId = params['userId'];
       this.courseId = params['courseId'];
       this.moduleId = params['moduleId'];
       this.lessonId = params['lessonId'];
       this.topicId = params['topicId'];
 
       if (this.lessonId !== undefined) {
-        this.service.findAllTopicsForLesson(this.lessonId)
+        this.topicService.findTopicsForLesson(this.lessonId)
           .then(topics => this.topics = topics);
       }
     });

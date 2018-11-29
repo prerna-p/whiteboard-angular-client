@@ -1,10 +1,14 @@
 <div class="container-fluid">
-  <div class="row bg-danger">
-    <div>
-      <h3 class="ml-lg-3">{{course.title}}</h3>
+
+  <div class="row">
+    <div class="container-fluid">
+      <div class="row bg-light">
+        <div class="col-sm-9">
+          <h3 class="ml-lg-3">{{course.title}}</h3>
+        </div>
+      </div>
     </div>
-    <app-lesson-tab></app-lesson-tab>
   </div>
-  <a routerLink="/home">Back</a>
   <app-module-list></app-module-list>
 </div>
+
